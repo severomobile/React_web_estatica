@@ -44,7 +44,7 @@ function AboutMe() {
 }
 
 function Projects() {
-    const githubUrl = "https://github.com/severomobile/android_evaluacion_6.git";
+
 
     return (
         <div className="projects">
@@ -53,20 +53,18 @@ function Projects() {
 
             <div className="content-wrapper">
                 <div className="image-project">
-                    <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-                        <img src="/images/proyecto_alke.svg" alt="Imagen del proyecto" className="project-image" />
-                    </a>
+                    < VerButton />
                 </div>
 
                 <div className="cards-container">
                     <div className="card">
-                            <h2>Proyecto Wallet</h2>
-                            <p>Desarrollé una aplicación Android que simulaba una billetera virtual para realizar ingresos y
-                                depósitos de dinero. Utilicé el IDE Android Studio y programé la aplicación en Kotlin, gestionando el código
-                                con Git para control de versiones. Implementé una arquitectura MVVM y utilicé Retrofit para la comunicación
-                                con una API REST, asegurando una integración eficiente de servicios externos. Diseñé y desarrollé la
-                                interfaz de usuario utilizando XML, optimizando consultas para funciones clave como la creación de usuarios, gestión
-                                de cuentas y ejecución de transacciones.</p>
+                        <h2>Proyecto Wallet</h2>
+                        <p>Desarrollé una aplicación Android que simulaba una billetera virtual para realizar ingresos y
+                            depósitos de dinero. Utilicé el IDE Android Studio y programé la aplicación en Kotlin, gestionando el código
+                            con Git para control de versiones. Implementé una arquitectura MVVM y utilicé Retrofit para la comunicación
+                            con una API REST, asegurando una integración eficiente de servicios externos. Diseñé y desarrollé la
+                            interfaz de usuario utilizando XML, optimizando consultas para funciones clave como la creación de usuarios, gestión
+                            de cuentas y ejecución de transacciones.</p>
                     </div>
                 </div>
             </div>
@@ -81,6 +79,16 @@ function UfoButton() {
     return (
         <a href={githubUrl} target="_blank" rel="noopener noreferrer">
             <button className="ufo-button">GitHub</button>
+        </a>
+    );
+}
+
+function VerButton() {
+    const githubUrl = "https://github.com/severomobile/android_evaluacion_6.git";
+
+    return (
+        <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="proyecto-link">
+            <button className="proyecto-button">Ver Proyecto</button>
         </a>
     );
 }

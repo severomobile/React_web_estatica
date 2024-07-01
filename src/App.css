@@ -295,6 +295,51 @@
 
 .image-project {
   margin-right: 2em; /* Espacio entre la imagen y la tarjeta */
+
+  position: relative;
+  background-color: #0a101e;
+  height: 530px;
+  width: 400px;
+  display: flex; /* Usa flexbox para centrar el contenido vertical y horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+
+  background-image: url('../public/images/proyecto_alke.svg'); /* Ruta a tu imagen de fondo */
+  background-size: contain; /* Ajusta la imagen de fondo para que se adapte sin perder proporción */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+}
+
+.proyecto-link {
+  text-decoration: none; /* Quitar el subrayado del enlace */
+}
+
+.proyecto-button {
+  background-color: rgba(250, 250, 177, 0.8);
+  color: rgba(0, 0, 0, 0.8);
+  border: none;
+  padding: 15px 30px;
+  font-family: 'Kanit', sans-serif;
+  filter: blur(1px); /* Aplica un desenfoque */
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px;
+  box-shadow:
+          0 0 10px rgba(246, 246, 158, 0.8),
+          0 0 20px rgba(255, 255, 0, 0.6),
+          0 0 30px rgba(255, 255, 0, 0.4),
+          0 0 40px rgba(255, 255, 0, 0.2),
+          0 0 50px rgba(255, 255, 0, 0.1);
+}
+
+.proyecto-link:hover .proyecto-button {
+  box-shadow:
+          0 0 20px rgba(250, 250, 224, 0.8),
+          0 0 30px rgba(248, 248, 232, 0.6),
+          0 0 40px rgba(246, 246, 237, 0.4),
+          0 0 50px rgba(255, 255, 0, 0.2),
+          0 0 60px rgba(255, 255, 0, 0.1);
 }
 
 .cards-container {
@@ -337,49 +382,3 @@
   0 0 50px rgba(0, 255, 0, 0.1);
 }
 
-.project-image {
-  width: 100%; /* La imagen ocupa todo el ancho disponible */
-  max-width: 250px; /* Ancho máximo de la imagen (ajustar según necesidades) */
-  border-radius: 8px;
-}
-
-.project-image:hover{
-  opacity: 0.8;
-  transform: scale(1.05);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.contacto {
-  position: relative;
-  background-color: #14213d;
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.contacto::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Color negro con 60% de opacidad */
-}
-
-.contacto h1 {
-  color: #ffffff;
-  font-size: 4vw;
-  font-family: 'Kanit', sans-serif;
-  text-align: center;
-  top: 0;
-  margin: 0;
-  text-shadow: 0 0 10px rgba(255, 255, 0, 0.2),
-  0 0 10px rgba(255, 255, 0, 0.2),
-  0 0 20px rgba(255, 255, 0, 0.6),
-  0 0 30px rgba(255, 255, 0, 0.4),
-  0 0 40px rgba(255, 255, 0, 0.2),
-  0 0 50px rgba(255, 255, 0, 0.1);
-  filter: blur(1px);
-}
