@@ -1,38 +1,385 @@
 .App {
+  margin: 0;
+  padding: 0;
+  position: relative; /* Añade posicionamiento relativo al contenedor principal */
+}
+
+.banner {
+  background-color: #e61212; /* Color de fondo del banner */
+  min-height: 100vh; /* Asegura que el banner tenga al menos el alto de la ventana */
+  width: 100%;
+  display: flex; /* Usa flexbox para centrar el contenido vertical y horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  position: relative; /* Asegura que los elementos posicionados se comporten correctamente */
+
+  background-image: url('../public/images/image_header_2.jpg'); /* Ruta a tu imagen de fondo */
+  background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Color negro con 60% de opacidad */
+}
+
+.rectangulo {
+  background-color: #000000;
+  width: 100%; /* Ancho del rectángulo en porcentaje */
+  max-width: 1138px; /* Ancho máximo del rectángulo */
+  height: 100vh; /* Alto del rectángulo en viewport height */
+  max-height: 494px; /* Alto máximo del rectángulo */
+  display: flex; /* Usa flexbox para centrar el contenido vertical y horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  position: absolute; /* Posicionamiento absoluto dentro del contenedor .banner */
+  top: 50%; /* Centra verticalmente en relación con el banner */
+  left: 50%; /* Centra horizontalmente en relación con el banner */
+  transform: translate(-50%, -50%); /* Centra exactamente */
+
+  background-image: url('../public/images/mystery_header.jpg'); /* Ruta a tu imagen de fondo */
+  background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+}
+
+.rectangulo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Color negro con 60% de opacidad */
+}
+
+.iam {
+  color: #100000; /* Color del texto dentro del rectángulo */
+  font-size: 4vw; /* Tamaño de fuente relativo al viewport width */
+  font-family: 'Kanit', sans-serif;
+  position: absolute; /* Posicionamiento absoluto */
+  top: 5%; /* Ajustar la posición desde la parte superior */
   text-align: center;
+  margin: 0; /* Elimina el margen por defecto del h1 */
+
+  /* Sombras del texto para simular efecto de neón */
+  text-shadow: 0 0 10px rgba(255, 255, 0, 0.8),
+  0 0 10px rgba(255, 255, 0, 0.8),
+  0 0 20px rgba(255, 255, 0, 0.6),
+  0 0 30px rgba(255, 255, 0, 0.4),
+  0 0 40px rgba(255, 255, 0, 0.2),
+  0 0 50px rgba(255, 255, 0, 0.1);
+
+  filter: blur(1.5px); /* Aplica un desenfoque */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.jose {
+  color: #000000; /* Color del texto dentro del rectángulo */
+  font-size: 4vw; /* Tamaño de fuente relativo al viewport width */
+  font-family: 'Kanit', sans-serif;
+  position: absolute; /* Posicionamiento absoluto */
+  text-align: center;
+  margin: 0; /* Elimina el margen por defecto del h1 */
+
+  /* Sombras del texto para simular efecto de neón en verde */
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.8),
+  0 0 20px rgba(0, 255, 0, 0.6),
+  0 0 30px rgba(0, 255, 0, 0.4),
+  0 0 40px rgba(0, 255, 0, 0.2),
+  0 0 50px rgba(0, 255, 0, 0.1);
+
+  filter: blur(1px); /* Aplica un desenfoque */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.developer {
+  color: #ffffff; /* Color del texto dentro del rectángulo */
+  font-size: 2vw; /* Tamaño de fuente relativo al viewport width */
+  font-family: 'Kanit', sans-serif;
+  position: absolute; /* Posicionamiento absoluto */
+  text-align: center;
+  bottom: 35%;
+  margin: 0; /* Elimina el margen por defecto del h1 */
+
+  filter: blur(1px); /* Aplica un desenfoque */
+}
+
+@media (max-width: 768px) {
+  .iam {
+    font-size: 10vw; /* Tamaño de fuente más grande para pantallas pequeñas */
+    top: 0; /* Ajuste de posición para pantallas pequeñas */
+    text-align: center;
+  }
+
+  .jose {
+    font-size: 10vw; /* Tamaño de fuente más grande para pantallas pequeñas */
+    text-align: center;
+  }
+
+  .developer {
+    font-size: 6vw; /* Tamaño de fuente más grande para pantallas pequeñas */
+    bottom: 20%; /* Ajuste de posición para pantallas pequeñas */
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.ufo-button {
+  background-color: rgba(250, 250, 177, 0.8);
+  color: rgba(0, 0, 0, 0.8);
+  border: none;
+  padding: 15px 30px;
+  font-family: 'Kanit', sans-serif;
+  filter: blur(1px); /* Aplica un desenfoque */
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px;
+  box-shadow:
+          0 0 10px rgba(246, 246, 158, 0.8),
+          0 0 20px rgba(255, 255, 0, 0.6),
+          0 0 30px rgba(255, 255, 0, 0.4),
+          0 0 40px rgba(255, 255, 0, 0.2),
+          0 0 50px rgba(255, 255, 0, 0.1);
+  transition: all 0.3s ease;
+
+  overflow: hidden; /* Para ocultar el contenido que se expande */
+
+  position: absolute;
+  bottom: 5%; /* Ajusta la distancia desde la parte inferior */
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Animación para mover el botón de un extremo a otro */
+  animation: moveButton 5s linear infinite;
+}
+
+.ufo-button:hover {
+  box-shadow:
+          0 0 20px rgba(250, 250, 224, 0.8),
+          0 0 30px rgba(248, 248, 232, 0.6),
+          0 0 40px rgba(246, 246, 237, 0.4),
+          0 0 50px rgba(255, 255, 0, 0.2),
+          0 0 60px rgba(255, 255, 0, 0.1);
+}
+
+.ufo-button:hover::before {
+  transform: scale(2); /* Escala el pseudo-elemento para expandir desde el centro */
+  opacity: 1;
+}
+
+@keyframes moveButton {
+  0% {
+    transform: translateX(-100%); /* Comienza en el extremo izquierdo */
+  }
+  50% {
+    transform: translateX(0%); /* Se desplaza al extremo derecho */
+  }
+  100% {
+    transform: translateX(-100%); /* Vuelve al extremo izquierdo */
+  }
+}
+
+.aboutme {
+  position: relative;
+  background-color: #14213d;
+  min-height: 100vh; /* Asegura que el banner tenga al menos el alto de la ventana */
+  width: 100%;
+  display: flex; /* Usa flexbox para centrar el contenido vertical y horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+
+  background-image: url('../public/images/alien-1296189.svg'); /* Ruta a tu imagen de fondo */
+  background-size: contain; /* Ajusta la imagen de fondo para que se adapte sin perder proporción */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+}
+
+.aboutme::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con 60% de opacidad */
+}
+
+.aboutme h1 {
+  color: #ffffff; /* Color del texto dentro del rectángulo */
+  font-size: 4vw; /* Tamaño de fuente relativo al viewport width */
+  font-family: 'Kanit', sans-serif;
+  position: absolute; /* Posicionamiento absoluto */
+  top: 5%; /* Ajustar la posición desde la parte superior */
+  text-align: center;
+  margin: 0; /* Elimina el margen por defecto del h1 */
+
+  /* Sombras del texto para simular efecto de neón */
+  text-shadow: 0 0 10px rgba(255, 255, 0, 0.2),
+  0 0 10px rgba(255, 255, 0, 0.2),
+  0 0 20px rgba(255, 255, 0, 0.6),
+  0 0 30px rgba(255, 255, 0, 0.4),
+  0 0 40px rgba(255, 255, 0, 0.2),
+  0 0 50px rgba(255, 255, 0, 0.1);
+
+  filter: blur(1px); /* Aplica un desenfoque */
+}
+
+.sobremi {
+  z-index: 1;
+  color: #ffffff;
+  font-size: 30px;
+  font-family: arial, sans-serif;
+  position: absolute;
+  text-align: justify;
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Ajustar centrado */
+  line-height: 1.6; /* Ajustar la altura de línea para dar más espacio */
+
+
+  /* Sombras del texto para simular efecto de neón en verde */
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.6),
+  0 0 20px rgba(0, 255, 0, 0.4),
+  0 0 30px rgba(0, 255, 0, 0.3),
+  0 0 40px rgba(0, 255, 0, 0.15),
+  0 0 50px rgba(0, 255, 0, 0.05);
+}
+
+.projects {
+  position: relative;
+  background-color: #14213d;
   min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.projects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con 60% de opacidad */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.projects h1 {
+  color: #ffffff;
+  font-size: 4vw;
+  font-family: 'Kanit', sans-serif;
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(255, 255, 0, 0.2),
+  0 0 10px rgba(255, 255, 0, 0.2),
+  0 0 20px rgba(255, 255, 0, 0.6),
+  0 0 30px rgba(255, 255, 0, 0.4),
+  0 0 40px rgba(255, 255, 0, 0.2),
+  0 0 50px rgba(255, 255, 0, 0.1);
+  filter: blur(1px);
+}
+
+.content-wrapper {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinea los elementos de arriba hacia abajo */
+  margin-top: 2em; /* Espacio entre el título y los contenedores */
+  flex-wrap: wrap;
+}
+
+.image-project {
+  margin-right: 2em; /* Espacio entre la imagen y la tarjeta */
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinea los elementos de arriba hacia abajo */
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 400px; /* Máximo ancho para mantener la legibilidad */
+  text-align: left;
+  padding: 20px;
+}
+
+.card h2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Kanit', sans-serif;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.8),
+  0 0 20px rgba(0, 255, 0, 0.2),
+  0 0 30px rgba(0, 255, 0, 0.1),
+  0 0 40px rgba(0, 255, 0, 0.1),
+  0 0 50px rgba(0, 255, 0, 0.1);
+}
+
+.card p {
+  text-align: justify;
+  color: #fbca56;
+  font-size: 18px;
+  font-family: 'Kanit', sans-serif;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.4),
+  0 0 20px rgba(0, 255, 0, 0.2),
+  0 0 30px rgba(0, 255, 0, 0.2),
+  0 0 40px rgba(0, 255, 0, 0.1),
+  0 0 50px rgba(0, 255, 0, 0.1);
+}
+
+.project-image {
+  width: 100%; /* La imagen ocupa todo el ancho disponible */
+  max-width: 250px; /* Ancho máximo de la imagen (ajustar según necesidades) */
+  border-radius: 8px;
+}
+
+.project-image:hover{
+  opacity: 0.8;
+  transform: scale(1.05);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.contacto {
+  position: relative;
+  background-color: #14213d;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con 60% de opacidad */
+}
+
+.contacto h1 {
+  color: #ffffff;
+  font-size: 4vw;
+  font-family: 'Kanit', sans-serif;
+  text-align: center;
+  top: 0;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(255, 255, 0, 0.2),
+  0 0 10px rgba(255, 255, 0, 0.2),
+  0 0 20px rgba(255, 255, 0, 0.6),
+  0 0 30px rgba(255, 255, 0, 0.4),
+  0 0 40px rgba(255, 255, 0, 0.2),
+  0 0 50px rgba(255, 255, 0, 0.1);
+  filter: blur(1px);
 }
