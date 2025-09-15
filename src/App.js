@@ -22,7 +22,7 @@ function Banner() {
                     JOSÉ RIVERA M.
                 </h1>
                 <h2 className="developer">
-                    SOFTWARE DEVELOPER
+                    DATA SCIENTIST
                 </h2>
                 <UfoButton />
             </div>
@@ -35,9 +35,9 @@ function AboutMe() {
         <div className="aboutme">
             <h1>ABOUT ME</h1>
             <p className="sobremi">
-                Egresado del Bootcamp Desarrollo de Aplicaciones Móviles Android Trainee de Talento Digital.
-                Apasionado por la tecnología y enfocado en construir soluciones innovadoras para dispositivos móviles.
-                Solido dominio de los principios fundamentales del desarrollo móvil Android.
+                Egresado del Bootcamp Ciencia de Datos de Talento Digital.
+                Apasionado por la tecnología y enfocado en construir soluciones que muestren el valor de los datos.
+                Solido dominio de los principios fundamentales de la ciencia de datos!.
             </p>
         </div>
     );
@@ -58,13 +58,16 @@ function Projects() {
 
                 <div className="cards-container">
                     <div className="card">
-                        <h2>Proyecto Wallet</h2>
-                        <p>Desarrollé una aplicación Android que simulaba una billetera virtual para realizar ingresos y
-                            depósitos de dinero. Utilicé el IDE Android Studio y programé la aplicación en Kotlin, gestionando el código
-                            con Git para control de versiones. Implementé una arquitectura MVVM y utilicé Retrofit para la comunicación
-                            con una API REST, asegurando una integración eficiente de servicios externos. Diseñé y desarrollé la
-                            interfaz de usuario utilizando XML, optimizando consultas para funciones clave como la creación de usuarios, gestión
-                            de cuentas y ejecución de transacciones.</p>
+                        <h2>BootCamp Ciencia de Datos</h2>
+                        <p> Desarrollé y documenté una serie de proyectos de análisis de datos y aprendizaje automático como parte del bootcamp. En estos proyectos, 
+                            utilicé Python y sus librerías esenciales, como Pandas y NumPy para la manipulación y limpieza de datos, y Scikit-learn para la creación de modelos predictivos.
+                            El flujo de trabajo que seguí en cada proyecto incluyó:
+                            Análisis Exploratorio de Datos (EDA): Empleé Matplotlib y Seaborn para visualizar patrones, detectar anomalías y entender la distribución de los datos.
+                            Ingeniería de Características: Preparé los datos para el modelado, creando y seleccionando variables relevantes para mejorar el rendimiento de los modelos.
+                            Modelado y Evaluación: Entrené y evalué diferentes modelos de machine learning, como regresión lineal y clasificación, utilizando métricas como el error cuadrático medio (RMSE) 
+                            y la exactitud. Todo el código de estos proyectos se gestionó con Git y está disponible en mi repositorio de GitHub, 
+                            lo que demuestra mi habilidad para seguir las mejores prácticas de desarrollo y documentar mi trabajo de manera clara y organizada.
+                        </p>
                     </div>
                 </div>
             </div>
